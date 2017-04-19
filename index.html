@@ -1,0 +1,112 @@
+<html>
+	<head>
+		<!--
+			Author: Akhil Ravipati
+			Desc: Temp assignment
+			Date: 14/04/2017
+		-->
+		<title>Profile Page</title>
+		<link rel="stylesheet" href="main.css">
+		<script src="main.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+		<div class="row">
+			<div id="navigation" class="col-12">
+				<div class="col-4 col-m4">
+					<a href="#" class="col-4 col-m4" id="logo">Photo</a>
+					<p id="profile-name" class="col-8 col-m8">Akhil Ravipati</p>
+				</div>
+				<ul class="col-8 col-m8">
+					<li class="col-3" id="filler"></li>
+					<li class="col-3 col-m4"><a href="#profile">Profile</a></li>
+					<li class="col-2" id="filler"></li>
+					<li class="col-3 col-m4"><a href="#feed">Feed</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div id="profile" class="col-12">
+				<div class="col-12 col-m12">
+					<img src="7mgdq2tlh4py.jpg" id="cover-img"></img>
+				</div>
+				
+				<div class="col-4 col-m4">
+					<div class="col-12 col-m12" style="height:50px;"></div>
+					<div class="col-3 col-m3" style="height:50px;"></div>
+					<img src="XEfHrr7.jpg" id="profile-img"></img>
+					<div class="col-12 col-m12" style="height:50px;"></div>
+				</div>
+				
+				<div class="col-8 col-m8">
+					<p><b>Name</b>: Akhil Ravipati</p>
+					<p><b>Location</b>: VIT University, Vellore</p>
+					<p><b>Interests</b>: Reading, Coding, Web dev.</p>
+					<p><b>Bio:</b> A 3rd student at VIT Univeristy, persuing bachelors in Computer Science and Engineering.</p>
+					<p><b>External links</b>:
+						<ul id="ext-links">
+							<li>Facebook</li>
+							<li>Twitter</li>
+							<li>Github</li>
+						</ul>
+					</p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div id="feed" class="col-12">
+				<div class="row">
+					<div id="init-message-wrapper">
+						<div class="gap col-2 col-m2"></div>
+						<div class="col-8 col-m8" id="init-message">
+							<p>Nothing Here Yet.</p>
+							<div class="row">
+								<div class="gap col-1 col-m1"></div>
+								<textarea type="text" name="post" class="col-10 col-m10" placeholder="Post text or links to a photo!"></textarea>
+								<div class="gap col-1 col-m1"></div>
+							</div>
+							<div class="gap col-12 col-m12"></div>
+							<div class="gap col-4 col-m4"></div>
+							<div class="col-4 col-m4">
+								<button name="postit" id="postit"  onclick="postit(1)">Post Text</button>
+								<button name="postit" id="postit"  onclick="postit(2)">Post Link</button>
+							</div>
+							<div class="gap col-4 col-m4"></div>
+						</div>
+						<div class="gap col-2 col-m2"></div>
+					</div>
+				</div>
+				<!--
+				This is the final output
+				<div id="outter-wrapper">
+					<div class="row inner-wrapper">
+						<div class="gap col-2 col-m2"></div>
+						<div class="posts col-8 col-m8">
+							<p>Text</p>
+						</div>
+						<div class="gap col-2 col-m2"></div>
+					</div>
+					
+					<div class="row inner-wrapper">
+						<div class="gap col-2 col-m2"></div>
+						<div class="posts col-8 col-m8">
+							<p>Text</p>
+						</div>
+						<div class="gap col-2 col-m2"></div>
+					</div>
+					
+					<div class="row inner-wrapper">
+						<div class="gap col-2 col-m2"></div>
+						<div class="posts col-8 col-m8">
+							<p>Text</p>
+						</div>
+						<div class="gap col-2 col-m2"></div>
+					</div>
+				</div>
+				-->
+			</div>
+		</div>
+	</body>
+</html>
