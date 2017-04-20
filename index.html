@@ -11,102 +11,78 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
 	<body>
-		<div class="row">
-			<div id="navigation" class="col-12">
-				<div class="col-4 col-m4">
-					<a href="#" class="col-4 col-m4" id="logo">Photo</a>
-					<p id="profile-name" class="col-8 col-m8">Akhil Ravipati</p>
+		<div class="row" >
+			<div id="navigation" class="col-12 col-m12">
+				<div class="col-4 col-m12">
+					<div class="gap col-12 col-m12"></div>
+					<img src="logo.jpg" class="col-4 col-m6" id="logo"></img>
+					<p id="profile-name" class="col-8 col-m6">Akhil Ravipati</p>
 				</div>
-				<ul class="col-8 col-m8">
-					<li class="col-3" id="filler"></li>
-					<li class="col-3 col-m4"><a href="#profile">Profile</a></li>
-					<li class="col-2" id="filler"></li>
-					<li class="col-3 col-m4"><a href="#feed">Feed</a></li>
+				<ul class="col-8 col-m12">
+					<li class="col-3 col-m3 filler"></li>
+					<a href="#profile" ><li class="col-3 col-m6 li-data">Profile</li></a>
+					<li class="col-2 col-m3 filler"></li>
+					<a href="#feed" ><li class="col-3 col-m6 li-data">Feed</li></a>
 				</ul>
 			</div>
 		</div>
 		
-		<div class="row">
-			<div id="profile" class="col-12">
-				<div class="col-12 col-m12">
-					<img src="7mgdq2tlh4py.jpg" id="cover-img"></img>
+		<div class="row" >
+			<div id="profile" class="col-12 col-m12">
+				<div class="col-12 col-m12" id="cover-img">
+					<img src="7mgdq2tlh4py.jpg" ></img>
 				</div>
 				
 				<div class="col-4 col-m4">
 					<div class="col-12 col-m12" style="height:50px;"></div>
-					<div class="col-3 col-m3" style="height:50px;"></div>
+					<div class="col-3 col-m1" style="height:50px;"></div>
 					<img src="XEfHrr7.jpg" id="profile-img"></img>
 					<div class="col-12 col-m12" style="height:50px;"></div>
 				</div>
 				
-				<div class="col-8 col-m8">
+				<div class="col-8 col-m8" id="self-data">
 					<p><b>Name</b>: Akhil Ravipati</p>
 					<p><b>Location</b>: VIT University, Vellore</p>
 					<p><b>Interests</b>: Reading, Coding, Web dev.</p>
 					<p><b>Bio:</b> A 3rd student at VIT Univeristy, persuing bachelors in Computer Science and Engineering.</p>
-					<p><b>External links</b>:
+					<p id="ext-links-p"><b>External links</b>:</p>
 						<ul id="ext-links">
-							<li>Facebook</li>
-							<li>Twitter</li>
-							<li>Github</li>
+							<li><img src="facebook.png"></img></li>
+							<li><img src="twitter.png"></img></li>
+							<li><img src="github.png"></img></li>
 						</ul>
-					</p>
 				</div>
 			</div>
 		</div>
-		
-		<div class="row">
-			<div id="feed" class="col-12">
+		<div class="row" >
+			<div id="feed" class="col-12 col-m12">
 				<div class="row">
 					<div id="init-message-wrapper">
-						<div class="gap col-2 col-m2"></div>
-						<div class="col-8 col-m8" id="init-message">
-							<p>Nothing Here Yet.</p>
+						<div class="gap col-2 col-m1"></div>
+						<div class="col-8 col-m10" id="init-message">
+							<p>Care to share your thoughts or pics?</p>
 							<div class="row">
 								<div class="gap col-1 col-m1"></div>
 								<textarea type="text" name="post" class="col-10 col-m10" placeholder="Post text or links to a photo!"></textarea>
 								<div class="gap col-1 col-m1"></div>
 							</div>
 							<div class="gap col-12 col-m12"></div>
-							<div class="gap col-4 col-m4"></div>
-							<div class="col-4 col-m4">
-								<button name="postit" id="postit"  onclick="postit(1)">Post Text</button>
-								<button name="postit" id="postit"  onclick="postit(2)">Post Link</button>
+							<div class="gap col-4 col-m2"></div>
+							<div class="col-4 col-m8">
+								<button name="postit" class="postit"  onclick="postit(1)">Post Text</button>
+								<button name="postit" class="postit"  onclick="postit(2)">Post Link</button>
 							</div>
-							<div class="gap col-4 col-m4"></div>
+							<div class="gap col-4 col-m2"></div>
 						</div>
-						<div class="gap col-2 col-m2"></div>
+						<div class="gap col-2 col-m1"></div>
 					</div>
 				</div>
-				<!--
-				This is the final output
-				<div id="outter-wrapper">
-					<div class="row inner-wrapper">
-						<div class="gap col-2 col-m2"></div>
-						<div class="posts col-8 col-m8">
-							<p>Text</p>
-						</div>
-						<div class="gap col-2 col-m2"></div>
-					</div>
-					
-					<div class="row inner-wrapper">
-						<div class="gap col-2 col-m2"></div>
-						<div class="posts col-8 col-m8">
-							<p>Text</p>
-						</div>
-						<div class="gap col-2 col-m2"></div>
-					</div>
-					
-					<div class="row inner-wrapper">
-						<div class="gap col-2 col-m2"></div>
-						<div class="posts col-8 col-m8">
-							<p>Text</p>
-						</div>
-						<div class="gap col-2 col-m2"></div>
-					</div>
-				</div>
-				-->
 			</div>
 		</div>
+		<footer>
+			<div class="col-12 col-m12"></div>
+			Designed by Akhil Ravipati as a private assignment.
+			<div class="col-12 col-m12"></div>
+		</footer>
 	</body>
 </html>

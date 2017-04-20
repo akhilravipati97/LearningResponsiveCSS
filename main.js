@@ -4,7 +4,7 @@ function postit(num) {
 	t = document.getElementsByName("post")[0].value;
 	date = new Date();
 	date = date.getDate() + "/" + (date.getMonth()+1) + "/" + date.getFullYear() + " - " + date.getHours() + ":" + date.getMinutes();
-	name = document.getElementById("profile-name").value;
+	name = document.getElementById("profile-name").innerHTML;
 	document.getElementsByName("post")[0].value="";
 	
 	if(t.length==0)
@@ -13,7 +13,6 @@ function postit(num) {
 		return;
 	}
 	
-	document.querySelector("#init-message p").style.display="None";
 
 	if(document.getElementsByClassName("outter-wrapper").length == 0)
 	{
@@ -28,17 +27,17 @@ function postit(num) {
 	innerwrapper.setAttribute("class","inner-wrapper row");
 	
 	gaps = document.createElement("div");
-	gaps.setAttribute("class","gap col-2 col-m2");
+	gaps.setAttribute("class","gap col-2 col-m1");
 	
 	//prepare the post
 	posts = document.createElement("div");
-	posts.setAttribute("class","posts col-8 col-m8");
+	posts.setAttribute("class","posts col-8 col-m10");
 	
 	namep = document.createElement("p");
-	namep.setAttribute("id","namep");
+	namep.setAttribute("class","namep");
 	namep.innerHTML = "<b>Name</b>: " + name;
 	datep = document.createElement("p");
-	datep.setAttribute("id", "datep");
+	datep.setAttribute("class", "datep");
 	datep.innerHTML = "<b>Timestamp</b>: " + date;
 	
 	posts.appendChild(namep);
@@ -59,13 +58,16 @@ function postit(num) {
 	
 	likes = document.createElement("p");
 	likes.setAttribute("class","likes");
+	id = Math.floor((Math.random() * 100) + 1);
+	likes.setAttribute("id",id);
 	likes.innerHTML = 0;
 	posts.appendChild(likes);
 	
 	likescounter = document.createElement("button");
 	likescounter.innerHTML = "Like";
 	likescounter.setAttribute("class","likecounter");
-	likescounter.setAttribute("onclick","inc_count()");
+	funct = "inc_count(" + id + ")";
+	likescounter.setAttribute("onclick",funct);
 	
 	posts.appendChild(likescounter);
 	
@@ -82,15 +84,16 @@ function postit(num) {
 	return;
 }
 
-function inc_count() {
-	likes = document.getElementsByClassName("likes")[0];
+function inc_count(id) {
+	likes = document.getElementById(id);
 	likescount = parseInt(likes.innerHTML);
 	likescount += 1;
 	likes.innerHTML = likescount;
 	
 }
 
+
 /*
 Bugs:
-1. The likes issue. Each post should increment it's own count
+1. The likes id issue. Psuedo random numbers could generate 2 same numbers.
 */

@@ -11,7 +11,7 @@
 }
 
 /*for tablets*/
-@media only screen and (min-width: 600px)
+@media only screen and (min-width: 0px) and (max-width: 767px)
 {
     .col-m1 {width: 8.33%;}
     .col-m2 {width: 16.66%;}
@@ -67,43 +67,92 @@ body
 
 #navigation
 {
-	height: 50px;
+	min-height: 75px;
+	height:auto;
 	position: fixed;
-	background-color: black;
+	background-color: #b0cce8	;
 	padding:0px;
 	margin:0px;
 	float:left;
 	z-index: 100;
+	box-shadow: 0px 2px 2px #808080;
 }
 
+#logo
+{
+	width:60px;
+	border:1px solid #ddd;
+	margin-left:5%;
+	margin-top: -3%;
+}
+
+#profile-name
+{
+	color:black;
+	margin-top: 0px;
+	padding-left: 20px;
+	font-size:25px;
+}
 
 #navigation ul
 {
 	list-style-type: none;
+	margin-top: 22px;
 }
 
 #navigation ul li
 {
 	padding:4px;
-	background-color:pink;
 	display:inline-block;
 	text-align:center;
 }
 
+.li-data
+{
+	background-color:#74AFAD;
+	border-radius: 5px;
+	padding-top:10px;
+	padding-bottom:10px;
+	font-size:20px;
+	box-shadow: 2px 2px 2px #aaaaa1;
+}
+
+.li-data a:active
+{
+	transform: translateY(2px);
+}
+
+.li-data a:link, a:visited
+{
+	color:black;
+	text-decoration:none;
+}
+
+
+
+.filler
+{
+	background-color: #b0cce8	;
+	color:#ECECEA;
+	height:1px;
+}
 
 
 #profile
 {
-	min-height:700px;
-	background-color: red;
+	min-height:200px;
+	background-color: #ffffff;
 	padding:50px 0px 0px 0px;
 	margin:0px;
 }
 
-#cover-img
+
+#cover-img img
 {
 	position:relative;
-	max-width:100%;
+	width:100%;
+	height:auto;
+	max-height:500px;
 	background-size: contain;
 	z-index:99;
 	opacity:1;
@@ -115,28 +164,64 @@ body
 	width:100px;
 }
 
+#self-data
+{
+	padding-top:30px;
+	padding-bottom: 50px;
+	font-size: 20px;
+}
+
+#self-data p
+{
+	border-left: 3px solid #9999ff;
+	padding:10px;
+	padding-left:20px;
+}
+
+#ext-links-p
+{
+	display:inline;
+}
+
 #ext-links
 {
 	list-style-type: None;
+	padding: 0px;
+	width: 70%;
+	margin: 0px;
+	display:inline;
+	padding-left: 20px;
 }
 
 #ext-links li
 {
-	display:inline-block;
-	padding-right:50px;	
+	display:inline;
+	padding-right:50px;
+}
+
+#ext-links li img
+{
+	width:30px;
+	height:30px;
+}
+
+#ext-links li img[src="github.png"]
+{
+	border-radius:50%;
 }
 
 #feed
 {
 	min-height:300px;
-	background-color: blue;
+	background-color: #f2f2f2;
 	padding:0px;
 	margin:0px;
 }
 
 #init-message-wrapper
 {
-	height:250px;
+	min-height:250px;
+	height: auto;
 	padding-top:50px;
 }
 
@@ -169,6 +254,12 @@ button
 	margin-right:4%;
 }
 
+.postit
+{
+	background-color: #e6e6ff;
+	border-radius: 5px;
+}
+
 #outter-wrapper
 {
 	padding-top:50px;
@@ -183,10 +274,17 @@ button
 	padding-bottom:10px;
 }
 
-.posts, .gap
+.posts
 {
 	height: 30px;
-	border:1px solid black;
+	border:1px solid #b3b3b3;
+	border-radius: 5px;
+	box-shadow: 0px 5px 10px #cccccc;
+}
+
+.gap
+{
+	height:30px;
 }
 
 .posts
@@ -202,23 +300,33 @@ button
 	margin:auto;
 }
 
-#namep
+.namep
 {
 	display: inline;
-	width:40%;
 	float:left;
+	margin-left: 5%;
+	padding: 3px;
 }
 
-#datep
+.datep
 {
 	display:inline;
-	width: 40%;
 	float:right;
+	margin-right: 5%;
+	padding: 3px;
 }
 
 #post-text
 {
 	clear:both;
+	padding: 5px 5px 5px 5px;
+	margin-left: 10%;
+	margin-right: 10%;
+	text-align:center;
+	font-size:20px;
+	box-shadow: 0px 1px 10px #bfbfbf;
+	padding-top:20px;
+	padding-bottom: 20px;
 }
 
 .likes
@@ -227,7 +335,7 @@ button
 	float:left;
 	margin:0px;
 	margin-bottom:10px;
-	margin-left:10px;
+	margin-left:5%;
 }
 
 .likecounter
@@ -235,6 +343,79 @@ button
 	display:inline;
 	float: right;
 	margin:0px;
-	margin-right:10px;
+	margin-right:5%;
 	width: auto;
+	background-color: #e6e6ff;
+	box-shadow: 0px 1px 5px #bfbfbf;
+}
+
+footer
+{
+	text-align:center;
+}
+
+footer div
+{
+	height:10px;
+}
+
+@media only screen and (min-width: 0px) and (max-width:767px)
+{
+	#logo
+	{
+		width: 50px;
+	}
+	
+	#profile-name
+	{
+		font-size:25px;
+		float:right;
+		padding-left:10px;
+	}
+	
+	#navigation ul
+	{
+		padding: 0px;
+		margin: 0px;
+		margin-bottom: 10px;
+	}
+	
+	#navigation ul li
+	{
+		margin-right: 1%;
+	}
+	
+	.li-data
+	{
+		margin-bottom: 10px;
+	}
+	
+	#profile
+	{
+		padding-top: 175px;
+	}
+	
+	.namep, .datep
+	{
+		width: 100%;
+		text-align: center;
+		clear: both;
+		margin: 0px;
+		margin-top: 1%;
+	}
+	
+	#profile-img
+	{
+		margin-left: 5%;
+	}
+	
+	#ext-links-p
+	{
+		display: block;
+	}
+	
+	#ext-links li
+	{
+		padding-right: 5px;
+	}
 }
