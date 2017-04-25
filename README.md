@@ -5,6 +5,8 @@ I started the design for desktop first and then used the media queries and the '
 
 I have mostly tried to do the job using pure CSS and JS.
 
-![The Desktop-elongated look](/preview/desktop-elongated.png?raw=true)
+![The Desktop-elongated look](/preview/desktop-elonagted.png?raw=true)
+
 ![The Mobile look](/preview/phone.png?raw=true)
-![The Tablet look](/preview/ipad.pn?raw=true)
+
+![The Tablet look](/preview/ipad.png?raw=true)
